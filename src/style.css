@@ -1,0 +1,70 @@
+h1 {
+  font-size: 65px;
+  margin-top: -40px;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: 15px;
+  padding: -100px;
+}
+h6 {
+  font-size: 12px;
+  margin-top: -5px;
+  padding-bottom: 15px;
+  text-decoration: underline;
+  padding-left: 5px;
+}
+p {
+  text-transform: capitalize;
+}
+.container {
+  padding-top: 30px;
+  opacity: var(-100px);
+}
+.search-form {
+  position: relative;
+  right: -300px;
+}
+.search-button {
+  position: relative;
+  right: 145px;
+}
+.current-button {
+  position: relative;
+  right: 165px;
+}
+.degrees {
+  font-size: 15px;
+}
+.description {
+  text-transform: capitalize;
+}
+.todays-emoji {
+  position: relative;
+  margin-top: -80px;
+  margin-bottom: -150px;
+  font-size: 200px;
+  right: -380px;
+  top: -65px;
+}
+.row {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.row-high {
+  margin-top: 15px;
+}
+
+.emoji {
+  size: 10px;
+  padding-top: 10px;
+}
+.percentage {
+  font-size: 10px;
+}

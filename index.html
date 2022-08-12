@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="search"
+                  id="search-input"
+                  autofocus="on"
+                  autocomplete="off"
+                  class="search"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="search"
+                  class="search-button w-100"
+                />
+              </div>
+              <div class="col-2">
+                <button
+                  class="current-button w-100"
+                  id="current-location-button"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+          <h1 id="city">New York</h1>
+          <h3></h3>
+          <h2>
+            <span id="current-temperature"> 84 </span>
+            <span class="degrees">
+              <a href="#" id="celsius-link">ºC</a>
+              | <a href="#" id="fahrenheit-link">ºF</a>
+            </span>
+          </h2>
+          <p id="temperature-description">Partly Cloudy</p>
+          <h4>
+            H: <span id="high-temperature">89°</span> / L:
+            <span id="low-temperature">71°</span>
+          </h4>
+
+          <div class="todays-emoji">☁️</div>
+
+          <br />
+          <h6>5 day forecast</h6>
+          <div class="row">
+            <div class="col">
+              Friday
+              <div class="emoji">☀️</div>
+              <div class="row-high">H: 86°</div>
+              <div class="row-low">L: 70°</div>
+            </div>
+            <div class="col">
+              Saturday
+              <div class="emoji">☁️</div>
+              <div class="row-high">H: 84°</div>
+              <div class="row-low">L: 71°</div>
+            </div>
+            <div class="col">
+              Sunday
+              <div class="emoji">🌩</div>
+              <span class="percentage"> 60% </span>
+              <div class="row-high">H: 84°</div>
+              <div class="row-low">L: 73°</div>
+            </div>
+            <div class="col">
+              Monday
+              <div class="emoji">🌩</div>
+              <span class="percentage"> 60% </span>
+              <div class="row-high">H: 83°</div>
+              <div class="row-low">L: 75°</div>
+            </div>
+            <div class="col">
+              Tuesday
+              <div class="emoji">⛅</div>
+              <div class="row-high">H: 90°</div>
+              <div class="row-low">L: 75°</div>
+            </div>
+            <div class="col">
+              Wednesday
+              <div class="emoji">⛅</div>
+              <div class="row-high">H: 93°</div>
+              <div class="row-low">L: 77°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
