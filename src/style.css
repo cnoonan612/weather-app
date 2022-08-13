@@ -1,6 +1,6 @@
 h1 {
   font-size: 65px;
-  margin-top: -40px;
+  margin-top: -20px;
   text-transform: capitalize;
 }
 h2 {
@@ -25,17 +25,22 @@ p {
   padding-top: 30px;
   opacity: var(-100px);
 }
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .search-form {
   position: relative;
-  right: -300px;
+  right: -225px;
 }
 .search-button {
   position: relative;
-  right: 145px;
+  right: 85px;
 }
 .current-button {
   position: relative;
-  right: 165px;
+  right: 105px;
+  border-radius: 3px;
 }
 .degrees {
   font-size: 15px;
