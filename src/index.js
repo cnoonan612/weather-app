@@ -40,18 +40,27 @@ let h3 = document.querySelector("h3");
 h3.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
 
 function showTemperature(response) {
+  let iconElement = document.querySelector("#icon");
   celsiusTemperature = response.data.main.temp;
+  console.log(response.data.wind);
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#temperature-description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#high-temperature").innerHTML = Math.round(
     response.data.main.temp_max
   );
   document.querySelector("#low-temperature").innerHTML = Math.round(
     response.data.main.temp_min
+  );
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
