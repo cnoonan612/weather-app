@@ -34,12 +34,21 @@ p {
 .search-button {
   position: relative;
   right: 100px;
+  background-color: #000;
+  border: black;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
 }
 
 .current-button {
   position: relative;
   right: 115px;
   border-radius: 3px;
+  border: black;
+  background-color: #000;
+  color: white;
+  font-size: 15px;
 }
 
 .degrees {
@@ -52,11 +61,11 @@ p {
 
 .todays-emoji {
   position: relative;
-  margin-top: -80px;
+  margin-top: -200px;
   margin-bottom: -150px;
-  font-size: 200px;
-  right: -380px;
-  top: -65px;
+  right: -400px;
+  top: -100px;
+  width: 180px;
 }
 
 .weather-forecast {
