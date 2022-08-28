@@ -36,8 +36,9 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-let h3 = document.querySelector("h3");
-h3.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
+document.querySelector(
+  "h3"
+).innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
