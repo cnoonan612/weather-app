@@ -1,14 +1,17 @@
+body {
+background-color: #99A799;
+}
 h1 {
-  font-size: 65px;
+  font-size: 70px;
   margin-top: -20px;
   text-transform: capitalize;
 }
 h2 {
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 h4 {
-  font-size: 15px;
+  font-size: 20px;
   padding: -100px;
 }
 h6 {
@@ -21,62 +24,82 @@ h6 {
 p {
   text-transform: capitalize;
 }
+small {
+color: #E2C2B9;
+font-family: courier;
+}
+a {
+color: #E2C2B9;
+text-decoration: none;
+}
+a:hover {
+color: #E2C2B9;
+text-decoration: underline; 
+}
 .container {
   padding-top: 30px;
   opacity: var(-100px);
   max-width: 800px;
   margin: 0 auto;
+  color: #99A799;
+}
+.card {
+background-color: #D3E4CD;
+border-color: #E2C2B9;
 }
 .search-form {
   position: relative;
   right: -250px;
 }
 .search-button {
+  background-color: #E2C2B9;
+  border: #E2C2B9;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
+  padding: 3px;
   position: relative;
   right: 100px;
-  background-color: #000;
-  border: black;
+}
+.current-button {
+  background-color: #E2C2B9;
+  border: #E2C2B9;
   border-radius: 3px;
   color: white;
   font-size: 15px;
-}
-
-.current-button {
+  padding: 3px;
   position: relative;
   right: 115px;
-  border-radius: 3px;
-  border: black;
-  background-color: #000;
-  color: white;
-  font-size: 15px;
 }
 
 .degrees {
   font-size: 15px;
 }
 
-.description {
-  text-transform: capitalize;
-}
-
 .todays-emoji {
-  position: relative;
   margin-top: -200px;
   margin-bottom: -150px;
+  position: relative;
   right: -400px;
+  text-align: center;
   top: -100px;
-  width: 180px;
+  width: 225px;
+}
+
+.wind-speed {
+text-transform: lowercase;
 }
 
 .weather-forecast {
+  color: #99A799;
+  font-weight: 500;
   margin-top: 20px;
   text-align: center;
-  color: black;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .weather-forecast-temperatures {
@@ -84,7 +107,7 @@ p {
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .row {

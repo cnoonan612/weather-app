@@ -27,9 +27,15 @@ let days = [
 let month = months[now.getMonth()];
 let day = days[now.getDay()];
 let date = now.getDate();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+let hour = now.getHours();
+
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+
+let morningEvening = "pm";
+if (now.getHours() <= 11) {
+  morningEvening = "am";
 }
 let minutes = now.getMinutes();
 if (minutes < 10) {
@@ -38,7 +44,8 @@ if (minutes < 10) {
 
 document.querySelector(
   "h3"
-).innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
+).innerHTML = `${day}, ${month} ${date} ${hour}:${minutes} ${morningEvening}`;
+
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -65,7 +72,7 @@ function displayForecast(response) {
           forecastDay.weather[0].icon
         }@2x.png"
         alt=""
-        width="40"
+        width="42"
       />
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -85,7 +92,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "c518f4649f44824aadf43797b42ec4db";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -98,9 +105,9 @@ function showTemperature(response) {
     Math.round(celsiusTemperature);
   document.querySelector("#temperature-description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#wind-speed").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#humidity").innerHTML = `humidity: ${Math.round(response.data.main.humidity)}%`;
+  document.querySelector("#wind-speed").innerHTML = `wind: ${Math.round(
+    response.data.wind.speed)}mph`;
   document.querySelector("#high-temperature").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -116,7 +123,6 @@ function showTemperature(response) {
 }
 
 function searchCity(city) {
-  let units = "metric";
   let apiKey = "c518f4649f44824aadf43797b42ec4db";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
@@ -135,7 +141,6 @@ searchForm.addEventListener("submit", search);
 function searchLocation(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
-  let units = "metric";
   let apiKey = "c518f4649f44824aadf43797b42ec4db";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
@@ -157,9 +162,11 @@ function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  document.querySelector("#high-temperature").innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
+let units = "metric";
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
