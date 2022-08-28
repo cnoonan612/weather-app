@@ -35,17 +35,21 @@ p {
   position: relative;
   right: 100px;
 }
+
 .current-button {
   position: relative;
   right: 115px;
   border-radius: 3px;
 }
+
 .degrees {
   font-size: 15px;
 }
+
 .description {
   text-transform: capitalize;
 }
+
 .todays-emoji {
   position: relative;
   margin-top: -80px;
@@ -54,20 +58,28 @@ p {
   right: -380px;
   top: -65px;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
 .row {
   text-align: center;
   margin: 0 auto;
   padding-bottom: 15px;
-}
-
-.row-high {
-  margin-top: 15px;
-}
-
-.emoji {
-  size: 10px;
-  padding-top: 10px;
-}
-.percentage {
-  font-size: 10px;
 }
